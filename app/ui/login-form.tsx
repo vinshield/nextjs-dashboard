@@ -11,6 +11,12 @@ import { Button } from './button';
 import { useActionState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Login',
+};
+
 export default function LoginForm() {
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
